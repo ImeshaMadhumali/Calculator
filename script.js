@@ -9,24 +9,23 @@ buttons.forEach(button => {
 
     if (buttonValue === '=') {
       try {
-        currentString = eval(currentString).toString(); // Evaluate the expression
+        currentString = eval(currentString).toString(); 
       } catch (error) {
-        currentString = "Error"; // Handle errors during evaluation
-      }
+        currentString = "Error"; 
     } else if (buttonValue === 'Ac') {
       currentString = ""; // Clear the input
     } else if (buttonValue === 'Del') {
-      currentString = currentString.slice(0, -1); // Delete the last character
+      currentString = currentString.slice(0, -1); 
     } else if (buttonValue === '%') {
       try {
-        currentString = (parseFloat(currentString) / 100).toString(); // Convert to percentage
+        currentString = (parseFloat(currentString) / 100).toString(); 
       } catch (error) {
-        currentString = "Error"; // Handle errors during conversion
+        currentString = "Error"; 
       }
     } else {
-      currentString += buttonValue; // Append the button value to the current string
+      currentString += buttonValue; 
     }
 
-    input.value = currentString; // Update the input field
+    input.value = currentString; 
   });
 });
